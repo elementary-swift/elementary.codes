@@ -1,0 +1,42 @@
+elementary-snippet {
+  display: block;
+  border: 2px solid var(--vp-c-brand-soft);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--vp-c-brand-soft);
+}
+
+elementary-snippet:not(:defined) {
+  min-height: 100px;
+}
+
+@media (max-width: 639px) {
+  elementary-snippet {
+    border-radius: 0;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
+elementary-snippet button {
+  background: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+  min-width: 100px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: background-color 0.2s ease;
+}
+
+elementary-snippet button + button {
+  margin-left: 8px;
+}
+
+elementary-snippet button:hover {
+  background: var(--vp-button-alt-hover-bg);
+}
+
+elementary-snippet button:active {
+  background: var(--vp-button-alt-active-bg);
+  scale: 0.96;
+}
