@@ -30,8 +30,13 @@ export default function markdownSymbolLinks(md: MarkdownIt) {
         const urlPath = components
           .map((part) => {
             let p = part.toLowerCase();
-            if (part.startsWith("@")) {
-              p = p.substring(1) + "()";
+            let hasParens = part.endsWith(")");
+            if (part.startsWith("@") || part.startsWith("#")) {
+              p = p.substring(1);
+
+              if (!p.endsWith(")")) {
+                p = p + "()";
+              }
             }
             return p;
           })

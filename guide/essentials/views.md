@@ -2,11 +2,11 @@
 
 Views are the fundamental building blocks in ElementaryUI. You describe the user interface by composing views.
 
-## Define a view
+## Creating a view
 
 A view is anything that conforms to the `ElementaryUI.View` protocol. You define your own view by applying the `ElementaryUI.@View` to a plain-old `struct`.
 
-The `body` property defines what an `ElementaryUI.View` is composed of.
+The `body` property describes what a `ElementaryUI.View` is composed of.
 
 ```swift
 @View
