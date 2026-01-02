@@ -36,7 +36,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y binaryen
 
       - name: Install dependencies
-        run: swift package resolve && pnpm install
+        run: swift package resolve --package-path swift && pnpm install
 
       - name: Install wasm-opt
         uses: phi-ag/setup-binaryen@v1
