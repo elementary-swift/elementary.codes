@@ -40,6 +40,10 @@ export default defineConfig({
       },
     ],
     sidebar: sidebar,
+    editLink: {
+      pattern:
+        "https://github.com/elementary-swift/elementary.codes/edit/main/:path",
+    },
     socialLinks: [
       {
         icon: "github",
