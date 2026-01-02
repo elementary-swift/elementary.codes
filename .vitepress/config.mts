@@ -88,9 +88,11 @@ export default defineConfig({
       },
     ],
     sidebar: sidebar,
-    editLink: {
-      pattern:
-        "https://github.com/elementary-swift/elementary.codes/edit/main/:path",
+    search: {
+      provider: "local",
+      options: {
+        detailedView: true,
+      },
     },
     socialLinks: [
       {
