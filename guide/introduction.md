@@ -29,13 +29,13 @@ Similar to SwiftUI, state changes are tracked with transactions and can be anima
 
 **Key differences:**
 
-- **Layout**: SwiftUI's layout system (`HStack`, `VStack`, etc.) does not map cleanly onto CSS-native layout primitives, so it's omitted.
+- **Layout**: SwiftUI's layout system (`HStack`, `VStack`, etc.) does not map cleanly onto CSS-native layout primitives, so it is omitted.
 - **Components**: High-level components (`Button`, `List`, etc.) don't have a clear web-native counterpart, so they are not included.
 - **Design systems**: Any CSS framework or web design system works seamlessly with ElementaryUI.
 
 ## Embedded Swift
 
-Another big difference to SwiftUI is that ElementaryUI does not use type reflection or runtime generics. The `@View` macro does some heavy-lifting at compile time, and the `@Reactive` macro provides a lean replacement for `@Observable`. This is primarily to stay compatible with [Embedded Swift](https://docs.swift.org/embedded/documentation/embedded/) and unlock the ability to produce tiny WebAssembly binaries.
+Another big difference to SwiftUI is that ElementaryUI does not use type reflection or runtime generics. The [`@View`](essentials/views.md) macro does some heavy-lifting at compile time, and the [`@Reactive`](essentials/state-and-reactivity.md) macro provides a lean replacement for `@Observable`. This is primarily to stay compatible with [Embedded Swift](https://docs.swift.org/embedded/documentation/embedded/) and unlock the ability to produce tiny WebAssembly binaries.
 
 Your application can still choose to use "full Swift", but the framework itself will remain _Embedded Swift_ compatible.
 

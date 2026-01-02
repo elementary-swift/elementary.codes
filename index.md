@@ -15,7 +15,7 @@ hero:
       text: What is it?
       link: /guide/introduction
     - theme: alt
-      text: GitHub
+      text: ⭐️ GitHub
       link: http://github.com/elementary-swift/elementary-ui
 
 features:
