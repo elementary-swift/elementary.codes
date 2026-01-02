@@ -35,6 +35,8 @@ struct SnippetContainerView {
       ReactiveCounterView()
     case BindingCounterButton.file:
       BindingCounterButton()
+    case MouseTracker.file:
+      MouseTracker()
     default:
       "Unknown snippet \(file?.value ?? "<none>")"
     }
