@@ -7,6 +7,9 @@ import markdownSymbolLinks from "./markdown-symbol-links";
 export default defineConfig({
   title: "Elementary",
   description: "A Swift Frontent Framework",
+  sitemap: {
+    hostname: "https://elementary.codes",
+  },
   head: [
     [
       "link",
@@ -77,6 +80,7 @@ export default defineConfig({
       },
     },
   },
+  appearance: "dark",
   themeConfig: {
     logo: "/elementary-logo.svg",
     // https://vitepress.dev/reference/default-theme-config
