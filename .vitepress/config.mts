@@ -2,62 +2,16 @@ import { defineConfig } from "vitepress";
 import swiftWasm from "@elementary-swift/vite-plugin-swift-wasm";
 import sidebar from "./sidebar.mts";
 import markdownSymbolLinks from "./markdown-symbol-links";
+import head from "./head.mts";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Elementary",
-  description: "A Swift Frontent Framework",
+  title: "ElementaryUI",
+  description: "A Swift frontend framework that runs in the browser",
   sitemap: {
     hostname: "https://elementary.codes",
   },
-  head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "/favicon.svg",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/png",
-        href: "/favicon-96x96.png",
-        sizes: "96x96",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "shortcut icon",
-        href: "/favicon.ico",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "/apple-touch-icon.png",
-      },
-    ],
-    [
-      "meta",
-      {
-        name: "apple-mobile-web-app-title",
-        content: "ElementaryUI",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "manifest",
-        href: "/site.webmanifest",
-      },
-    ],
-  ],
+  head,
   markdown: {
     config: (md) => {
       md.use(markdownSymbolLinks);
