@@ -7,6 +7,54 @@ import markdownSymbolLinks from "./markdown-symbol-links";
 export default defineConfig({
   title: "Elementary",
   description: "A Swift Frontent Framework",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon-96x96.png",
+        sizes: "96x96",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "shortcut icon",
+        href: "/favicon.ico",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "apple-mobile-web-app-title",
+        content: "ElementaryUI",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
+    ],
+  ],
   markdown: {
     config: (md) => {
       md.use(markdownSymbolLinks);
@@ -30,7 +78,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "images/elementary-logo.svg",
+    logo: "/elementary-logo.svg",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Guide", link: "/guide/introduction" },

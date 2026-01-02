@@ -5,7 +5,7 @@ hero:
   name: ElementaryUI
   text: Swift, in the browser.
   # tagline:
-  image: /images/elementary-logo.svg
+  image: /elementary-logo.svg
 
   actions:
     - theme: brand
