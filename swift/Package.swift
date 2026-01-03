@@ -5,8 +5,7 @@ let package = Package(
   name: "elementary-web-app",
   platforms: [.macOS(.v26)],
   dependencies: [
-    .package(
-      url: "https://github.com/elementary-swift/elementary-ui.git", branch: "feature/basic-unmount")
+    .package(url: "https://github.com/elementary-swift/elementary-ui.git", .upToNextMinor(from: "0.1.1")),
   ],
   targets: [
     .executableTarget(
