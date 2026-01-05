@@ -36,8 +36,8 @@ export default defineConfig({
   },
   appearance: "dark",
   themeConfig: {
-    logo: "/elementary-logo.svg",
     // https://vitepress.dev/reference/default-theme-config
+    logo: "/elementary-logo.svg",
     nav: [
       { text: "Guide", link: "/guide/introduction" },
       {
