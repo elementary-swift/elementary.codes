@@ -41,7 +41,7 @@ export default {
             },
             { text: "Animatable Modifiers", link: "animatable-modifiers" },
             { text: "Transitions", link: "transitions" },
-            { text: "Animate Layout", link: "animate-layout" },
+            { text: "Animate Layout and CSS", link: "animate-layout-and-css" },
             { text: "Custom Animations", link: "custom-animations" },
           ],
         },

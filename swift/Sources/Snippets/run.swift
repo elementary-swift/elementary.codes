@@ -37,6 +37,8 @@ struct SnippetContainerView {
       BindingCounterButton()
     case MouseTracker.file:
       MouseTracker()
+    case WithAnimationView.file:
+      WithAnimationView()
     default:
       "Unknown snippet \(file?.value ?? "<none>")"
     }
