@@ -10,6 +10,13 @@
         </ul>
       </div>
     </div>
+    <hr />
+    <p class="disclaimer">
+      Swift and SwiftUI are trademarks of Apple Inc.
+      <br />
+      ElementaryUI is an open-source project and not affiliated with or endorsed
+      by Apple Inc.
+    </p>
   </footer>
 </template>
 
@@ -55,6 +62,11 @@ const sections = [
   background: var(--vp-c-bg-soft);
 }
 
+#footer hr {
+  border: 1px solid var(--vp-c-divider);
+  margin: 0;
+}
+
 #footer .container {
   max-width: 900px;
   margin: 0 auto;
@@ -92,5 +104,13 @@ const sections = [
 
 #footer .VPLink:hover {
   color: var(--vp-c-brand-1);
+}
+
+#footer .disclaimer {
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 1.4;
+  color: var(--vp-c-text-2);
+  padding: 12px;
 }
 </style>
