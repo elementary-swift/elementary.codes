@@ -4,10 +4,7 @@
 This section is incomplete.
 :::
 
-## Text inputs
+### See also
 
-## Checkboxes
-
-## Select / radios
-
-
+- `ElementaryUI.View.bindValue(_:)`
+- `ElementaryUI.View.bindChecked(_:)`
