@@ -39,6 +39,8 @@ struct SnippetContainerView {
       MouseTracker()
     case WithAnimationView.file:
       WithAnimationView()
+    case AnimateLayoutView.file:
+      AnimateLayoutView()
     default:
       "Unknown snippet \(file?.value ?? "<none>")"
     }
