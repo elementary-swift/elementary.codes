@@ -52,6 +52,10 @@ export default defineConfig({
         detailedView: true,
       },
     },
+    editLink: {
+      pattern:
+        "https://github.com/elementary-swift/elementary.codes/edit/main/:path",
+    },
     socialLinks: [
       {
         icon: "github",
