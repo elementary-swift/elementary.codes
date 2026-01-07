@@ -45,6 +45,10 @@ const sections = [
         link: "https://github.com/elementary-swift/elementary-ui",
       },
       {
+        text: "Bluesky",
+        link: "https://bsky.app/profile/elementary.codes",
+      },
+      {
         text: "Discord",
         link: "https://discord.com/channels/780838335798706197/1449031857961435136",
       },
