@@ -12,7 +12,7 @@ For any of the methods described below you will need the following:
 
 ## Vite Starter Template
 
-The easiest way go get going is by using the Vite Starter [template repository](https://github.com/elementary-swift/starter-vite).
+The easiest way to get going is by using the Vite Starter [template repository](https://github.com/elementary-swift/starter-vite).
 
 You can use the [degit](https://github.com/Rich-Harris/degit) utility to scaffold a local project:
 
@@ -51,7 +51,7 @@ $ pnpm dev
 :::
 
 **That's it!**  
-After an initial build of your Swift package, any changes to the Swift source code will be _hot-reloaded_ automatically. Consult the [template readme](https://github.com/elementary-swift/starter-vite/blob/main/README.md) for further information.
+After an initial build of your Swift package, any changes to the Swift source code will be _hot-reloaded_ automatically. Consult the [template README](https://github.com/elementary-swift/starter-vite/blob/main/README.md) for further information.
 
 ## Manual Setup
 
@@ -96,7 +96,7 @@ struct MyApp {
 
 :::
 
-You can run a simple build to check that the Swift part is setup correctly.
+You can run a simple build to check that the Swift part is set up correctly.
 
 ```sh
 # Make sure to use the Swift SDK matching your toolchain version
@@ -105,7 +105,7 @@ swift build --swift-sdk swift-6.2.3-RELEASE_wasm
 
 ### Web Setup
 
-In order to run your Swift WebAssembly executable in the browser you need an HTML page and a bit of JavaScript glue code. As most web project will also require additional resources and assests (like CSS files, images, ...) this guide recommends [Vite](https://vite.dev/) as the web build tool.
+In order to run your Swift WebAssembly executable in the browser you need an HTML page and a bit of JavaScript glue code. As most web projects will also require additional resources and assets (like CSS files, images, ...) this guide recommends [Vite](https://vite.dev/) as the web build tool.
 
 Install Vite and the [Vite plugin for Swift WebAssembly](https://www.npmjs.com/package/@elementary-swift/vite-plugin-swift-wasm).
 
@@ -121,7 +121,7 @@ pnpm add -D vite @elementary-swift/vite-plugin-swift-wasm
 
 :::
 
-Create a vite config and add the plugin. Adding a typescript config will enable type-checking and a better code editor experience.
+Create a Vite config and add the plugin. Adding a TypeScript config will enable type-checking and a better code editor experience.
 
 ::: code-group
 
@@ -171,7 +171,7 @@ pnpm add @bjorn3/browser_wasi_shim@~0.4 ./.build/checkouts/elementary-ui/Browser
 
 :::
 
-Finally, add an `index.html` file and a few lines or typescript code that run the WebAssembly application.
+Finally, add an `index.html` file and a few lines of TypeScript code that run the WebAssembly application.
 
 ::: code-group
 
@@ -199,7 +199,7 @@ await runApplication(appInit);
 
 :::
 
-You can now use Vite to run a _dev server_ that watches your Swift source files and automatically hot-rebuilds your application. Use `vite build` to create a deployment bundle and see the [Vite Plugin Readme](https://github.com/elementary-swift/vite-plugin-swift-wasm) for more configuration options.
+You can now use Vite to run a _dev server_ that watches your Swift source files and automatically hot-rebuilds your application. Use `vite build` to create a deployment bundle and see the [Vite Plugin README](https://github.com/elementary-swift/vite-plugin-swift-wasm) for more configuration options.
 
 ::: code-group
 
