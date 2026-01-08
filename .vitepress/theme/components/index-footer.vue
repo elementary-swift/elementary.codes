@@ -45,6 +45,10 @@ const sections = [
         link: "https://github.com/elementary-swift/elementary-ui",
       },
       {
+        text: "Mastodon",
+        link: "https://mastodon.social/@elementarycodes",
+      },
+      {
         text: "Bluesky",
         link: "https://bsky.app/profile/elementary.codes",
       },

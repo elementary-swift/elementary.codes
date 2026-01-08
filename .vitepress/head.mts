@@ -34,6 +34,13 @@ export default [
     },
   ],
   [
+    "link",
+    {
+      rel: "me",
+      href: "https://mastodon.social/@elementarycodes",
+    },
+  ],
+  [
     "meta",
     {
       name: "apple-mobile-web-app-title",

@@ -62,6 +62,10 @@ export default defineConfig({
         link: "https://github.com/elementary-swift/elementary-ui",
       },
       {
+        icon: "mastodon",
+        link: "https://mastodon.social/@elementarycodes",
+      },
+      {
         icon: "bluesky",
         link: "https://bsky.app/profile/elementary.codes",
       },
