@@ -8,7 +8,8 @@ For any of the methods described below you will need the following:
 - [**Swift 6.2+**](https://www.swift.org/install/) with [**SwiftSDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
 - [**Node.js 22+**](https://nodejs.org/en/download) for Vite tooling
 - [Optional] Binaryen `wasm-opt` ([homebrew](https://formulae.brew.sh/formula/binaryen), [manual](https://github.com/WebAssembly/binaryen/releases))
-  :::
+
+:::
 
 ## Vite Starter Template
 
@@ -52,6 +53,15 @@ $ pnpm dev
 
 **That's it!**  
 After an initial build of your Swift package, any changes to the Swift source code will be _hot-reloaded_ automatically. Consult the [template README](https://github.com/elementary-swift/starter-vite/blob/main/README.md) for further information.
+
+## Templates and Examples
+
+Here is a list of starter and demo projects:
+
+| Project                                                                           | Description                                                                  |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [**Minimal Vite Starter**](https://github.com/elementary-swift/starter-vite)      | Basic template for ElementaryUI.                                             |
+| [**Tailwind Starter**](https://github.com/elementary-swift/starter-vite-tailwind) | Starter template with [Tailwind CSS](https://tailwindcss.com) preconfigured. |
 
 ## Manual Setup
 
