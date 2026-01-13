@@ -58,10 +58,11 @@ After an initial build of your Swift package, any changes to the Swift source co
 
 Here is a list of starter and demo projects:
 
-| Project                                                                           | Description                                                                  |
-| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**Minimal Vite Starter**](https://github.com/elementary-swift/starter-vite)      | Basic template for ElementaryUI.                                             |
-| [**Tailwind Starter**](https://github.com/elementary-swift/starter-vite-tailwind) | Starter template with [Tailwind CSS](https://tailwindcss.com) preconfigured. |
+| Project                                                                                     | Description                                                                  |
+| ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [**Minimal Vite Starter**](https://github.com/elementary-swift/starter-vite)                | Basic template for ElementaryUI.                                             |
+| [**Tailwind Starter**](https://github.com/elementary-swift/starter-vite-tailwind)           | Starter template with [Tailwind CSS](https://tailwindcss.com) preconfigured. |
+| [**Swiftle**](https://github.com/elementary-swift/elementary-ui/tree/main/Examples/Swiftle) | A tiny word game.                                                            |
 
 ## Manual Setup
 
