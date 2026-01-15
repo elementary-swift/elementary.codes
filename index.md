@@ -42,3 +42,19 @@ features:
 <<< @/swift/Sources/Snippets/LoveCounter.swift#snippet
 
 <elementary-snippet file="LoveCounter" />
+
+<script setup>
+import Sponsors from './.vitepress/theme/components/Sponsors.vue'
+</script>
+
+<hr>
+
+<span id="sponsors" aria-hidden="true" style="display: block; height: 0; scroll-margin-top: 60px;"></span>
+
+<div style="text-align: center; margin-top: 2rem;">
+  <p>Thank you to everyone supporting this open‑source project financially.
+  <br>Please consider joining them by <a href="https://github.com/sponsors/sliemeobn" target="_blank" rel="noopener">sponsoring ElementaryUI</a>.
+  </p>
+
+  <Sponsors />
+</div>
