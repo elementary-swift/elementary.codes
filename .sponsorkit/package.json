@@ -1,0 +1,11 @@
+{
+  "name": "elementary-sponsors",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "sponsorkit"
+  },
+  "devDependencies": {
+    "sponsorkit": "^17.0.0"
+  }
+}
