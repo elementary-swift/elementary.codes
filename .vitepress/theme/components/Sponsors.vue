@@ -1,5 +1,5 @@
 <script setup>
-import s600 from "../../../public/sponsors/sponsors-600.svg?raw";
+import s600 from "/sponsors/sponsors-600.svg?raw";
 </script>
 
 <template>
