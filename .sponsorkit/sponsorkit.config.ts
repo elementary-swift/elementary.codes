@@ -13,7 +13,8 @@ export default defineConfig({
     {
       title: "Sponsors",
       monthlyDollars: 200,
-      preset: tierPresets.large,
+      preset: tierPresets.xl,
+      padding: { bottom: 40 },
     },
     {
       title: "Pioneers",
