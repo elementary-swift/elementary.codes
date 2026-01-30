@@ -10,7 +10,7 @@ Check out the [docs](https://swiftpackageindex.com/elementary-swift/elementary) 
 
 :::
 
-## Using HTML view
+## Using HTML in views
 
 Build up your HTML using the provided lower-case types like `div`, `p`, `button`, and `h1`.
 
@@ -36,6 +36,7 @@ div(.class("container"), .id("main")) {
   p(.style(["color": "crimson"])) {
     "Styled text"
   }
+  input(.type(.text), .placeholder("Enter something"))
 }
 ```
 
