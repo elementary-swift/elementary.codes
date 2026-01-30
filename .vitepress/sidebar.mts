@@ -46,6 +46,14 @@ export default {
           ],
         },
         {
+          text: "Additional Topics",
+          collapsed: false,
+          base: "/guide/topics/",
+          items: [
+            { text: "Server-Side Rendering", link: "server-side-rendering" },
+          ],
+        },
+        {
           text: "API Reference",
           link: "https://swiftpackageindex.com/elementary-swift/elementary-ui/documentation",
         },
