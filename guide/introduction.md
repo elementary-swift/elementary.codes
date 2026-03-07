@@ -70,6 +70,6 @@ If you are building a production-critical banking dashboard today, maybe wait a 
 
 ## Get involved
 
-There is still plenty to do to make Swift a _first-class_ web technology. Join the discussion on [Discord](https://discord.com/channels/780838335798706197/1449031857961435136) or contribute on [GitHub](https://github.com/elementary-swift/elementary-ui).
+There is still plenty to do to make Swift a _first-class_ web technology. Join the discussion on [Discord](https://discord.gg/ARZHKGa2EU) or contribute on [GitHub](https://github.com/elementary-swift/elementary-ui).
 
 **_Let's make Swift in the Browser a reality!_**

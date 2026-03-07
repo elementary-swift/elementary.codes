@@ -71,7 +71,7 @@ export default defineConfig({
       },
       {
         icon: "discord",
-        link: "https://discord.com/channels/780838335798706197/1449031857961435136",
+        link: "https://discord.gg/ARZHKGa2EU",
       },
     ],
   },
