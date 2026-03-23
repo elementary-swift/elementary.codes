@@ -8,3 +8,4 @@ This section is incomplete.
 
 - `ElementaryUI.View.bindValue(_:)`
 - `ElementaryUI.View.bindChecked(_:)`
+- [Controlling Focus](/guide/dom-interaction/controlling-focus)

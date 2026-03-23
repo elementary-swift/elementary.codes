@@ -27,6 +27,7 @@ export default {
           items: [
             { text: "HTML Elements", link: "html-elements" },
             { text: "Input Bindings", link: "input-bindings" },
+            { text: "Controlling Focus", link: "controlling-focus" },
             { text: "Handling Events", link: "handling-events" },
           ],
         },

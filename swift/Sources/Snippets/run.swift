@@ -37,6 +37,8 @@ struct SnippetContainerView {
       BindingCounterButton()
     case MouseTracker.file:
       MouseTracker()
+    case FocusStateForm.file:
+      FocusStateForm()
     case WithAnimationView.file:
       WithAnimationView()
     case AnimateLayoutView.file:
