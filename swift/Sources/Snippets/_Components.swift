@@ -166,7 +166,10 @@ final class HostAttributes {
 extension JSObject {
     fileprivate var __elementId: Int? {
         get {
-            return self["__elementId"].number.flatMap(Int.init)
+            guard let number = self["__elementId"].number else {
+                return nil
+            }
+            return Int(number)
         }
         set {
             self["__elementId"] = newValue.jsValue
