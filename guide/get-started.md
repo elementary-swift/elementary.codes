@@ -5,7 +5,7 @@ Go from zero to **_Swift in the Browser_** in minutes.
 ::: info Prerequisites
 For any of the methods described below you will need the following:
 
-- [**Swift 6.2+**](https://www.swift.org/install/) with [**SwiftSDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
+- [**Swift 6.3+**](https://www.swift.org/install/) with [**SwiftSDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
 - [**Node.js 22+**](https://nodejs.org/en/download) for Vite tooling
 - [Optional] Binaryen `wasm-opt` ([homebrew](https://formulae.brew.sh/formula/binaryen), [manual](https://github.com/WebAssembly/binaryen/releases))
 
@@ -77,7 +77,7 @@ Create a Swift package with an executable target, and add _ElementaryUI_ as a de
 swift package init --type executable --name MyApp
 
 # Add dependency
-swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.1.0
+swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.2.0
 swift package add-target-dependency ElementaryUI MyApp --package elementary-ui
 ```
 
@@ -102,7 +102,7 @@ struct MyApp {
     name: "MyApp",
     platforms: [.macOS(.v15)], // [!code ++]
     dependencies: [
-      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.1.0")
+      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.2.0")
 ```
 
 :::
@@ -111,7 +111,7 @@ You can run a simple build to check that the Swift part is set up correctly.
 
 ```sh
 # Make sure to use the Swift SDK matching your toolchain version
-swift build --swift-sdk swift-6.2.3-RELEASE_wasm
+swift build --swift-sdk swift-6.3-RELEASE_wasm
 ```
 
 ### Web Setup
