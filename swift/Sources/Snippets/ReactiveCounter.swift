@@ -1,7 +1,7 @@
+// #region snippet
 import ElementaryUI
 import Reactivity
 
-// #region snippet
 @Reactive
 final class CounterModel {
     private var count = 0
