@@ -6,6 +6,6 @@
     "generate": "sponsorkit"
   },
   "devDependencies": {
-    "sponsorkit": "^17.0.0"
+    "sponsorkit": "^18.0.0"
   }
 }
