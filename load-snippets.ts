@@ -4,11 +4,5 @@ import { installCustomElementHook } from "./elementary-components";
 installCustomElementHook();
 
 if (!import.meta.env.SSR) {
-  void (async () => {
-    const [{ runApplication }, { default: swiftSnippets }] = await Promise.all([
-      import("elementary-ui-browser-runtime"),
-      import("virtual:swift-wasm?init"),
-    ]);
-    runApplication(swiftSnippets);
-  })();
+  import("virtual:swift-wasm?js").then(i => i.init());
 }
