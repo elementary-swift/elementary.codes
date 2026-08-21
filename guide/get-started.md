@@ -3,11 +3,11 @@
 Go from zero to **_Swift in the Browser_** in minutes.
 
 ::: info Prerequisites
-For any of the methods described below you will need the following:
+For any of the methods described below, you will need the following:
 
-- [**Swift 6.3+**](https://www.swift.org/install/) with [**SwiftSDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
+- [**Swift 6.3+**](https://www.swift.org/install/) with [**Swift SDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
 - [**Node.js 22+**](https://nodejs.org/en/download) for Vite tooling
-- [Optional] Binaryen `wasm-opt` ([homebrew](https://formulae.brew.sh/formula/binaryen), [manual](https://github.com/WebAssembly/binaryen/releases))
+- [Optional] Binaryen `wasm-opt` ([Homebrew](https://formulae.brew.sh/formula/binaryen), [manual](https://github.com/WebAssembly/binaryen/releases))
 
 :::
 
@@ -22,9 +22,9 @@ npx degit elementary-swift/starter-vite my-elementary-project
 cd my-elementary-project
 ```
 
-In your new project folder you will find a Swift package and a Vite project already configured to work together.
+In your new project folder, you will find a Swift package and a Vite project already configured to work together.
 
-Install package dependencies
+Install package dependencies:
 ::: code-group
 
 ```sh [npm]
@@ -38,7 +38,7 @@ $ pnpm install
 
 :::
 
-Start Vite dev mode
+Start Vite dev mode:
 ::: code-group
 
 ```sh [npm]
@@ -66,22 +66,23 @@ Here is a list of starter and demo projects:
 
 ## Manual Setup
 
-Alternatively, you can also set up a project from scratch with just a few steps.
+Alternatively, you can set up a project from scratch with just a few steps.
 
 ### Swift Package
 
-Create a Swift package with an executable target, and add _ElementaryUI_ as a dependency.
+Create a Swift package with an executable target, and add [ElementaryUI](https://github.com/elementary-swift/elementary-ui) and [JavaScriptKit](https://github.com/swiftwasm/JavaScriptKit) as dependencies.
 
 ```sh
 # Initialize a package
 swift package init --type executable --name MyApp
 
-# Add dependency
-swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.2.0
+# Add dependencies
+swift package add-dependency https://github.com/swiftwasm/JavaScriptKit --from 0.56.0
+swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.6.0
 swift package add-target-dependency ElementaryUI MyApp --package elementary-ui
 ```
 
-Mount the application's root view in your Swift `@main` entrypoint. For _macOS_, add the platform requirement to your _Package.swift_ file:
+Mount the application's root view in your Swift `@main` entrypoint. For macOS, add the platform requirement to your `Package.swift` file:
 
 ::: code-group
 
@@ -102,7 +103,8 @@ struct MyApp {
     name: "MyApp",
     platforms: [.macOS(.v15)], // [!code ++]
     dependencies: [
-      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.2.0")
+      .package(url: "https://github.com/swiftwasm/JavaScriptKit", from: "0.56.0"),
+      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.6.0")
 ```
 
 :::
@@ -111,23 +113,25 @@ You can run a simple build to check that the Swift part is set up correctly.
 
 ```sh
 # Make sure to use the Swift SDK matching your toolchain version
-swift build --swift-sdk swift-6.3-RELEASE_wasm
+swift build --swift-sdk swift-6.3.3-RELEASE_wasm
 ```
 
 ### Web Setup
 
-In order to run your Swift WebAssembly executable in the browser you need an HTML page and a bit of JavaScript glue code. As most web projects will also require additional resources and assets (like CSS files, images, ...) this guide recommends [Vite](https://vite.dev/) as the web build tool.
+In order to run your Swift WebAssembly executable in the browser, you need an HTML page and a bit of JavaScript glue code. As most web projects will also require additional resources and assets (like CSS files, images, ...), this guide recommends [Vite](https://vite.dev/) as the web build tool.
 
-Install Vite and the [Vite plugin for Swift WebAssembly](https://www.npmjs.com/package/@elementary-swift/vite-plugin-swift-wasm).
+Install Vite and the [Vite plugin for Swift WebAssembly](https://www.npmjs.com/package/@elementary-swift/vite-plugin-swift-wasm) as dev dependencies, and the [WASI Shim](https://github.com/bjorn3/browser_wasi_shim), which the runtime glue code depends on.
 
 ::: code-group
 
 ```sh [npm]
 npm install -D vite @elementary-swift/vite-plugin-swift-wasm
+npm install @bjorn3/browser_wasi_shim@~0.4
 ```
 
 ```sh [pnpm]
 pnpm add -D vite @elementary-swift/vite-plugin-swift-wasm
+pnpm add @bjorn3/browser_wasi_shim@~0.4
 ```
 
 :::
@@ -141,7 +145,7 @@ import { defineConfig } from "vite";
 import swiftWasm from "@elementary-swift/vite-plugin-swift-wasm";
 
 export default defineConfig({
-  plugins: [swiftWasm()],
+  plugins: [swiftWasm({ useEmbeddedSDK: true })], // [!code highlight]
 });
 ```
 
@@ -152,7 +156,7 @@ export default defineConfig({
     "module": "ESNext",
     "moduleResolution": "bundler",
     "lib": ["ES2022", "DOM"],
-    "types": ["vite/client", "@elementary-swift/vite-plugin-swift-wasm/client"],
+    "types": ["vite/client", "@elementary-swift/vite-plugin-swift-wasm/client"], // [!code highlight]
     "isolatedModules": true,
     "strict": true,
     "noEmit": true
@@ -162,31 +166,11 @@ export default defineConfig({
 
 :::
 
-The `elementary-ui` Swift package comes bundled with a _BrowserRuntime_ JavaScript module that
-contains all the glue code you need to run a WebAssembly application.
-
-Currently, this includes the [JavaScriptKit Runtime](https://github.com/swiftwasm/JavaScriptKit) and a minimal
-configuration of the [Browser WASI Shim](https://github.com/bjorn3/browser_wasi_shim). However, this may be extended in the future to contain additional bridging code for _ElementaryUI_ features.
+Finally, add an `index.html` file with a short script that runs the WebAssembly application.
 
 ::: code-group
 
-```sh [npm]
-swift package resolve
-npm install @bjorn3/browser_wasi_shim@~0.4 ./.build/checkouts/elementary-ui/BrowserRuntime
-```
-
-```sh [pnpm]
-swift package resolve
-pnpm add @bjorn3/browser_wasi_shim@~0.4 ./.build/checkouts/elementary-ui/BrowserRuntime
-```
-
-:::
-
-Finally, add an `index.html` file and a few lines of TypeScript code that run the WebAssembly application.
-
-::: code-group
-
-```html [index.html]
+```html{9-12} [index.html]
 <!DOCTYPE html>
 <html>
   <head>
@@ -195,22 +179,17 @@ Finally, add an `index.html` file and a few lines of TypeScript code that run th
     <title>MyApp</title>
   </head>
   <body>
-    <!-- [!code highlight] -->
-    <script type="module" src="./index.ts"></script>
+    <script type="module">
+      import { init } from "virtual:swift-wasm?js";
+      await init()
+    </script>
   </body>
 </html>
 ```
 
-```ts [index.ts]
-import { runApplication } from "elementary-ui-browser-runtime";
-import appInit from "virtual:swift-wasm?init";
-
-await runApplication(appInit);
-```
-
 :::
 
-You can now use Vite to run a _dev server_ that watches your Swift source files and automatically hot-rebuilds your application. Use `vite build` to create a deployment bundle and see the [Vite Plugin README](https://github.com/elementary-swift/vite-plugin-swift-wasm) for more configuration options.
+You can now use Vite to run a _dev server_ that watches your Swift source files and automatically hot-rebuilds your application. Use `vite build` to create a deployment bundle. See the [Vite plugin README](https://github.com/elementary-swift/vite-plugin-swift-wasm) for more configuration options.
 
 ::: code-group
 
