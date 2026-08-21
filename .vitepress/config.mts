@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import swiftWasm from "@elementary-swift/vite-plugin-swift-wasm";
 import sidebar from "./sidebar.mts";
-import markdownSymbolLinks from "./markdown-symbol-links";
+import markdownSymbolLinks from "./markdown-symbol-links.ts";
 import head from "./head.mts";
 
 // https://vitepress.dev/reference/site-config

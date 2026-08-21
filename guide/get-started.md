@@ -160,7 +160,7 @@ export default defineConfig({
 });
 ```
 
-```jso:line-numbers [tsconfig.json]
+```json:line-numbers [tsconfig.json]
 {
   "compilerOptions": {
     "target": "ES2022",
