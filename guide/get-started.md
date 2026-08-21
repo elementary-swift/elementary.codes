@@ -28,12 +28,12 @@ Install package dependencies:
 ::: code-group
 
 ```sh [npm]
-$ npm install
+npm install
 ```
 
 ```sh [pnpm]
-$ pnpm preinstall
-$ pnpm install
+pnpm preinstall
+pnpm install
 ```
 
 :::
@@ -42,11 +42,11 @@ Start Vite dev mode:
 ::: code-group
 
 ```sh [npm]
-$ npm run dev
+npm run dev
 ```
 
 ```sh [pnpm]
-$ pnpm dev
+pnpm dev
 ```
 
 :::
@@ -120,6 +120,17 @@ swift build --swift-sdk swift-6.3.3-RELEASE_wasm
 
 In order to run your Swift WebAssembly executable in the browser, you need an HTML page and a bit of JavaScript glue code. As most web projects will also require additional resources and assets (like CSS files, images, ...), this guide recommends [Vite](https://vite.dev/) as the web build tool.
 
+Start with a simple `package.json` file:
+::: code-group
+
+```json:line-numbers [package.json]
+{
+  "type": "module"
+}
+```
+
+:::
+
 Install Vite and the [Vite plugin for Swift WebAssembly](https://www.npmjs.com/package/@elementary-swift/vite-plugin-swift-wasm) as dev dependencies, and the [WASI Shim](https://github.com/bjorn3/browser_wasi_shim), which the runtime glue code depends on.
 
 ::: code-group
@@ -140,7 +151,7 @@ Create a Vite config and add the plugin. Adding a TypeScript config will enable 
 
 ::: code-group
 
-```ts [vite.config.ts]
+```ts:line-numbers [vite.config.ts]
 import { defineConfig } from "vite";
 import swiftWasm from "@elementary-swift/vite-plugin-swift-wasm";
 
@@ -149,7 +160,7 @@ export default defineConfig({
 });
 ```
 
-```json [tsconfig.json]
+```jso:line-numbers [tsconfig.json]
 {
   "compilerOptions": {
     "target": "ES2022",
@@ -170,7 +181,7 @@ Finally, add an `index.html` file with a short script that runs the WebAssembly 
 
 ::: code-group
 
-```html{9-12} [index.html]
+```html:line-numbers{9-12} [index.html]
 <!DOCTYPE html>
 <html>
   <head>
