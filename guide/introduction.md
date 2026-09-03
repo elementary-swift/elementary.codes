@@ -72,6 +72,10 @@ The core architecture — the reactive engine, the DOM mapping, and the animatio
 
 If you are building a production-critical banking dashboard today, maybe wait a bit. But if you are a Swift enthusiast looking to build a personal project, an internal tool, or a web component without touching JavaScript, **now is the perfect time to dive in.**
 
+::: tip Looking for server-side Swift?
+ElementaryUI is built on [Elementary](https://github.com/elementary-swift/elementary), a lightweight server-side HTML rendering library with Vapor and Hummingbird integrations. See [Server-Side Rendering](topics/server-side-rendering.md) for how the projects fit together.
+:::
+
 ## Get involved
 
 There is still plenty to do to make Swift a _first-class_ web technology. Join the discussion on [Discord](https://discord.gg/ARZHKGa2EU) or contribute on [GitHub](https://github.com/elementary-swift/elementary-ui).

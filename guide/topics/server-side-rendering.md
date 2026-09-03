@@ -13,6 +13,28 @@ This chapter explains how SSR works in Elementary today, how it relates to Eleme
 
 The goal is for these two worlds to one day be fully integrated in a combined `ElementaryUI` framework, however, the details of how exactly this will happen are not yet decided. It will most likely involve package traits or similar for conditional compilation.
 
+## Server Framework Integrations
+
+Elementary renders to text and is framework-agnostic, so it works with any Swift server. For the two most common choices, community-maintained packages let you return `HTML` values directly from a route handler.
+
+::: code-group
+
+```swift [Hummingbird]
+// https://github.com/hummingbird-community/hummingbird-elementary
+.package(url: "https://github.com/hummingbird-community/hummingbird-elementary.git", from: "0.5.0"),
+.product(name: "HummingbirdElementary", package: "hummingbird-elementary"),
+```
+
+```swift [Vapor]
+// https://github.com/vapor-community/vapor-elementary
+.package(url: "https://github.com/vapor-community/vapor-elementary.git", from: "0.2.0"),
+.product(name: "VaporElementary", package: "vapor-elementary"),
+```
+
+:::
+
+For runnable examples, see the [Hummingbird + Tailwind demo](https://github.com/elementary-swift/elementary/tree/main/Examples/HummingbirdDemo), or the [Hummingbird + HTMX](https://github.com/elementary-swift/elementary-htmx/tree/main/Examples/HummingbirdDemo) and [Vapor + HTMX](https://github.com/elementary-swift/elementary-htmx/tree/main/Examples/VaporDemo) demos.
+
 ## SSR + ElementaryUI (what works today)
 
 ElementaryUI does not yet ship with a complete “render on the server and hydrate on the client” pipeline.
