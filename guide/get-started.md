@@ -32,7 +32,6 @@ npm install
 ```
 
 ```sh [pnpm]
-pnpm preinstall
 pnpm install
 ```
 
@@ -63,6 +62,7 @@ Here is a list of starter and demo projects:
 | [**Minimal Vite Starter**](https://github.com/elementary-swift/starter-vite)      | Basic template for ElementaryUI.                                                              |
 | [**Tailwind Starter**](https://github.com/elementary-swift/starter-vite-tailwind) | Starter template with [Tailwind CSS](https://tailwindcss.com) preconfigured.                  |
 | [**Swiftle**](https://elementary-swift.github.io/elementary-ui/)                  | A tiny word game using [ElementaryFlow](https://github.com/elementary-swift/elementary-flow). |
+| [**Full Stack Swift Demo**](https://cloudflare-worker.examples.elementary.codes/) | Swift in the browser. Swift on the edge, running in Cloudflare workers.                       |
 
 ## Manual Setup
 
