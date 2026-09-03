@@ -4,6 +4,10 @@ ElementaryUI is a **Swift frontend framework** that runs in the browser. It lets
 
 It takes inspiration from SwiftUI to provide an idiomatic way to describe state-driven user interfaces while firmly staying a web framework.
 
+::: tip Prefer to watch?
+[**Swift in the Browser with ElementaryUI**](https://www.youtube.com/watch?v=OmQ881sOTIc), recorded at _Swift @ FOSDEM 2026_, walks through the motivation and a live demo of building a reactive, animated web app in Swift.
+:::
+
 ::: danger Caution, Hot!
 ElementaryUI is an ambitious open-source project in its very early days. The foundation is starting to settle, but there is still a lot to build, invent, and improve.
 
