@@ -51,6 +51,7 @@ export default {
           collapsed: false,
           base: "/guide/topics/",
           items: [
+            { text: "JavaScript Interop", link: "javascript-interop" },
             { text: "Server-Side Rendering", link: "server-side-rendering" },
           ],
         },

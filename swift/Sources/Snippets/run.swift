@@ -43,6 +43,8 @@ struct SnippetContainerView {
       WithAnimationView()
     case AnimateLayoutView.file:
       AnimateLayoutView()
+    case ClickRace.file:
+        ClickRace()
     default:
       "Unknown snippet \(file?.value ?? "<none>")"
     }
