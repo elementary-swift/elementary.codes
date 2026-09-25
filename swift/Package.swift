@@ -1,4 +1,4 @@
-// swift-tools-version:6.2
+// swift-tools-version:6.4
 import PackageDescription
 
 let package = Package(
@@ -6,8 +6,8 @@ let package = Package(
   platforms: [.macOS(.v26)],
   dependencies: [
     .package(
-      url: "https://github.com/elementary-swift/elementary-ui.git", .upToNextMinor(from: "0.4.0")),
-    .package(url: "https://github.com/swiftwasm/JavaScriptKit.git", from: "0.56.0"),
+      url: "https://github.com/elementary-swift/elementary-ui.git", .upToNextMinor(from: "0.7.0")),
+    .package(url: "https://github.com/swiftwasm/JavaScriptKit.git", from: "0.58.0"),
   ],
   targets: [
     .executableTarget(
