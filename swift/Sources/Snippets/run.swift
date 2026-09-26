@@ -1,25 +1,18 @@
 import ElementaryUI
+import ElementaryWebComponents
 import JavaScriptKit
 import Reactivity
 
 @main
 struct Run {
-  static func main() {
-    registerComponent(
-      name: "elementary-snippet",
-      view: SnippetContainerView(), attributes: ["file"]
-    )
+  static func main() throws {
+    try CustomElements.define("elementary-snippet", SnippetContainerView.self)
   }
 }
 
-@View
+@CustomElement
 struct SnippetContainerView {
-  @Environment(HostAttributes.self) var attributes
-
-  var file: SnippetFile? {
-    attributes.getAttribute(name: "file")
-      .map(SnippetFile.init)
-  }
+  @Attribute var file: SnippetFile?
 
   var body: some View {
     switch file {
@@ -53,10 +46,14 @@ protocol SnippetContentView {
   static var file: SnippetFile { get }
 }
 
-struct SnippetFile: Equatable, ExpressibleByStringLiteral {
+struct SnippetFile: Equatable, ExpressibleByStringLiteral, ExpressibleByAttributeValue {
   var value: String
 
   init(stringLiteral value: String) {
+    self.value = value
+  }
+
+  init(attributeValue value: String) {
     self.value = value
   }
 
