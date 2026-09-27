@@ -16,6 +16,7 @@ export default function markdownSymbolLinks(md: MarkdownIt) {
 
     const prefixes = [
       { prefix: "ElementaryUI.", module: "elementaryui" },
+      { prefix: "ElementaryWebComponents.", module: "elementarywebcomponents" },
       { prefix: "Reactivity.", module: "reactivity" },
     ];
 

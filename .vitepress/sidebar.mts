@@ -52,6 +52,7 @@ export default {
           base: "/guide/topics/",
           items: [
             { text: "Server-Side Rendering", link: "server-side-rendering" },
+            { text: "Web Components", link: "web-components" },
           ],
         },
         {

@@ -49,3 +49,7 @@ div {
         .attributes(.class("fancy"), when: isFancy)
 }
 ```
+
+## Custom Elements
+
+If you want to use ElementaryUI to create your own custom elements which can be integrated in existing web projects, see [Web Components](../topics/web-components.md).

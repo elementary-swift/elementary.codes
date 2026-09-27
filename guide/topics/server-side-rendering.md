@@ -51,7 +51,7 @@ This gives you:
 
 You can read more about mounting multiple apps in the [Application](../essentials/application.md#multiple-applications) chapter.
 
-It is also planned to have out-of-the-box support for defining **Web Components** (custom elements) in ElementaryUI. In fact, this website already uses custom elements for its interactive snippets (look for `elementary-snippet`).
+You can also define [Web Components](web-components.md) in ElementaryUI and include their custom HTML tags in the server-rendered page. Your Swift module registers these custom elements with the browser and they mount automatically when appear in the server-generated HTML. This website uses custom elements for its interactive snippets by registering an `<elementary-snippet>` element.
 
 ## Hydration (the direction)
 

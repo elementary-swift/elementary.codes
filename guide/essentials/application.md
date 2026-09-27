@@ -41,3 +41,5 @@ struct IslandsApp {
 ```
 
 Each call to `ElementaryUI.Application.mount(in:)` creates an independent application instance with its own state and lifecycle.
+
+You can also expose a view as a custom HTML element that mounts automatically when added to the page. See [Web Components](../topics/web-components.md).

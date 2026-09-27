@@ -7,6 +7,7 @@ import Reactivity
 struct Run {
   static func main() throws {
     try CustomElements.define("elementary-snippet", SnippetContainerView.self)
+    try CustomElements.define("wonky-label", WonkyLabel.self, shadow: .open)
   }
 }
 

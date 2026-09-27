@@ -40,3 +40,5 @@ struct Screen {
 ElementaryUI's [HTML Elements](/guide/dom-interaction/html-elements) (like `div`, `p`, `button`) are views too — they participate in the same composition model as your own views.
 
 That means you can freely mix “element views” and “custom views” in the same hierarchy.
+
+To make a view available as its own HTML tag on a page, define a [Web Component](../topics/web-components.md) using `@CustomElement`.

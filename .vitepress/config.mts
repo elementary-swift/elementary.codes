@@ -29,7 +29,7 @@ export default defineConfig({
     template: {
       compilerOptions: {
         isCustomElement: (tag) => {
-          return tag.startsWith("elementary-");
+          return tag.startsWith("elementary-") || tag === "wonky-label";
         },
       },
     },
