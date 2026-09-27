@@ -8,8 +8,6 @@ struct WonkyLabel {
 
     @State var yOffset = 0.0
 
-    let xWobble = [0.0, 1, 0.4, 2]
-
     var body: some View {
         div { slot() }
             .offset(y: yOffset * wobble)
@@ -18,7 +16,7 @@ struct WonkyLabel {
                     yOffset = .random(in: -0.5...0.5)
                 }
             }
-            .phaseAnimator(xWobble) { content, phase in
+            .phaseAnimator([0.0, 1, 0.4, 2]) { content, phase in
                 content.offset(x: phase * wobble)
             } animation: { _ in
                 .bouncy
