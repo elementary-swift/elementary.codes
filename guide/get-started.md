@@ -5,7 +5,7 @@ Go from zero to **_Swift in the Browser_** in minutes.
 ::: info Prerequisites
 For any of the methods described below, you will need the following:
 
-- [**Swift 6.3+**](https://www.swift.org/install/) with [**Swift SDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
+- [**Swift 6.4+**](https://www.swift.org/install/) with [**Swift SDK for WebAssembly**](https://www.swift.org/documentation/articles/wasm-getting-started.html)
 - [**Node.js 22+**](https://nodejs.org/en/download) for Vite tooling
 - [Optional] Binaryen `wasm-opt` ([Homebrew](https://formulae.brew.sh/formula/binaryen), [manual](https://github.com/WebAssembly/binaryen/releases))
 
@@ -113,7 +113,7 @@ You can run a simple build to check that the Swift part is set up correctly.
 
 ```sh
 # Make sure to use the Swift SDK matching your toolchain version
-swift build --swift-sdk swift-6.3.3-RELEASE_wasm
+swift build --swift-sdk swift-6.4.0-RELEASE_wasm
 ```
 
 ### Web Setup
