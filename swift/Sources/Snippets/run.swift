@@ -37,6 +37,10 @@ struct SnippetContainerView {
       WithAnimationView()
     case AnimateLayoutView.file:
       AnimateLayoutView()
+    case ContinuousPhaseAnimatorView.file:
+      ContinuousPhaseAnimatorView()
+    case TriggeredPhaseAnimatorView.file:
+      TriggeredPhaseAnimatorView()
     default:
       "Unknown snippet \(file?.value ?? "<none>")"
     }
