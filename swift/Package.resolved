@@ -1,5 +1,5 @@
 {
-  "originHash" : "56c1bf22161667bab58b0a5f622a934f2095f2fcbdbf0f7b0f299ba0bc398259",
+  "originHash" : "4c7bd400441a076018f197350615722eeb733c4e121f1e3e175bcef1524adfc8",
   "pins" : [
     {
       "identity" : "elementary",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/elementary-swift/elementary-ui.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "9ab2fa84be977d1680947a3dab4d0407186a1b12"
+        "revision" : "f4f4d96cda9b76017baa457f77d07d52f9cf628d",
+        "version" : "0.8.0"
       }
     },
     {
