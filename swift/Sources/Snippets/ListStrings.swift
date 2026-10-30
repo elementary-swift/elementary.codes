@@ -14,7 +14,7 @@ struct ListStrings {
             }
 
         ul {
-            ForEach(items.enumerated(), key: { $0.element }) { item in
+            ForEach(items.enumerated(), id: { $0.element }) { item in
                 li { item.element }
                     .onClick {
                         items.remove(at: item.offset)

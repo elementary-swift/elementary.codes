@@ -27,11 +27,11 @@ jobs:
 
       - uses: swift-actions/setup-swift@v3
         with:
-          swift-version: "6.4.0"
+          swift-version: "6.4.2"
           skip-verify-signature: true
 
       - name: Install Swift SDK for WebAssembly
-        run: swift sdk install https://download.swift.org/swift-6.4.0-release/wasm-sdk/swift-6.4.0-RELEASE/swift-6.4.0-RELEASE_wasm.artifactbundle.tar.gz --checksum f07b7be3c586d92d7a07051fc6d303b87ebea67eadc40640ba59d5a8b79aa86d
+        run: swift sdk install https://download.swift.org/swift-6.4.2-release/wasm-sdk/swift-6.4.2-RELEASE/swift-6.4.2-RELEASE_wasm.artifactbundle.tar.gz --checksum 83baca83553f8c443cda7b84800912e6e709c3acd2e7ebf277794ca5836c0da5
 
       - name: Install dependencies
         run: swift package resolve --package-path swift && pnpm install
@@ -39,7 +39,7 @@ jobs:
       - name: Install wasm-opt
         uses: phi-ag/setup-binaryen@v1
         with:
-          version: "125"
+          version: "133"
 
       - name: Build VitePress site
         run: pnpm run build
@@ -47,7 +47,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
-          wranglerVersion: "4.54.0"
+          wranglerVersion: "4.156.0"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           # packageManager: pnpm

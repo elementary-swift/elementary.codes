@@ -6,8 +6,8 @@ let package = Package(
   platforms: [.macOS(.v26)],
   dependencies: [
     .package(
-      url: "https://github.com/elementary-swift/elementary-ui.git", .upToNextMinor(from: "0.8.0")),
-    .package(url: "https://github.com/swiftwasm/JavaScriptKit.git", from: "0.58.0"),
+      url: "https://github.com/elementary-swift/elementary-ui.git", .upToNextMinor(from: "0.9.0")),
+    .package(url: "https://github.com/swiftwasm/JavaScriptKit.git", from: "0.62.0"),
   ],
   targets: [
     .executableTarget(
