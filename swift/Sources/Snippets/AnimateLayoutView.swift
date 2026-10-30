@@ -19,7 +19,7 @@ struct AnimateLayoutView {
             .onClick { items.shuffle() }
 
         ul {
-            ForEach(items.enumerated(), key: { "\($0.element)" }) { (index, item) in
+            ForEach(items.enumerated(), id: { "\($0.element)" }) { (index, item) in
                 li { "Item \(item)" }
                     .onClick { items.remove(at: index) }
             }

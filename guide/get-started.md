@@ -77,8 +77,8 @@ Create a Swift package with an executable target, and add [ElementaryUI](https:/
 swift package init --type executable --name MyApp
 
 # Add dependencies
-swift package add-dependency https://github.com/swiftwasm/JavaScriptKit --from 0.56.0
-swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.6.0
+swift package add-dependency https://github.com/swiftwasm/JavaScriptKit --from 0.62.0
+swift package add-dependency https://github.com/elementary-swift/elementary-ui --from 0.9.0
 swift package add-target-dependency ElementaryUI MyApp --package elementary-ui
 ```
 
@@ -103,8 +103,8 @@ struct MyApp {
     name: "MyApp",
     platforms: [.macOS(.v15)], // [!code ++]
     dependencies: [
-      .package(url: "https://github.com/swiftwasm/JavaScriptKit", from: "0.56.0"),
-      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.6.0")
+      .package(url: "https://github.com/swiftwasm/JavaScriptKit", from: "0.62.0"),
+      .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.9.0")
 ```
 
 :::
@@ -113,7 +113,7 @@ You can run a simple build to check that the Swift part is set up correctly.
 
 ```sh
 # Make sure to use the Swift SDK matching your toolchain version
-swift build --swift-sdk swift-6.4.0-RELEASE_wasm
+swift build --swift-sdk swift-6.4.2-RELEASE_wasm
 ```
 
 ### Web Setup

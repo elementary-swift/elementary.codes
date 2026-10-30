@@ -2,17 +2,11 @@
 
 ## `ForEach`
 
-Use `ElementaryUI.Elementary.ForEach` when you need a stable key for your list items (reordering, insertions, animations). You can either use elements that implement `Identifiable`, or the `ElementaryUI.Elementary.ForEach.init(_:key:content:)` initializer that takes a `key` closure.
+Use `ElementaryUI.ForEach` when you need a stable id for your list items (reordering, insertions, animations). You can either use elements that implement `Identifiable`, or the `ElementaryUI.ForEach.init(_:id:content:)` initializer that takes an `id` closure returning any `Hashable` value.
 
 <<< @/swift/Sources/Snippets/ListStrings.swift#snippet
 
 <elementary-snippet file="ListStrings" />
-
-::: info NOTE
-
-To maintain *Embedded Swift* support, only types that are `LosslessStringConvertible` can be used as keys. Keys are considered equal if their UTF8 represenatations are equal.
-
-::: 
 
 ## `for ... in`
 
