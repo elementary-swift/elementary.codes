@@ -1,7 +1,7 @@
 # Server-Side Rendering
 
 ElementaryUI is designed to run in the browser and keep the DOM in sync with your view hierarchy.
-But the lower-level building blocks it stands on — all HTML types and the `@HTMLBuilder` for composition — come from the [`Elementary`](https://github.com/elementary-swift/elementary) package, which focuses on **server-side rendering (SSR)**.
+But the lower-level building blocks it stands on — all HTML types and the `@ContentBuilder` for composition — come from the [`Elementary`](https://github.com/elementary-swift/elementary) package, which focuses on **server-side rendering (SSR)**.
 
 This chapter explains how SSR works in Elementary today, how it relates to ElementaryUI, and what patterns are practical while a _hydration_ feature is still evolving.
 
@@ -21,7 +21,7 @@ Elementary renders to text and is framework-agnostic, so it works with any Swift
 
 ```swift [Hummingbird]
 // https://github.com/hummingbird-community/hummingbird-elementary
-.package(url: "https://github.com/hummingbird-community/hummingbird-elementary.git", from: "0.5.0"),
+.package(url: "https://github.com/hummingbird-community/hummingbird-elementary.git", from: "0.6.0"),
 .product(name: "HummingbirdElementary", package: "hummingbird-elementary"),
 ```
 
@@ -42,7 +42,7 @@ However, you can still combine SSR and interactivity using an **islands** approa
 
 - Use **Elementary** to render the full HTML page (or most of it).
 - Add placeholders like `<div id="comments"></div>` where you want interactivity.
-- In the browser, mount one or more **ElementaryUI** applications into those placeholders using `Application(...).mount(in:)`.
+- In the browser, mount one or more **ElementaryUI** applications into those placeholders using `ElementaryUI.Application.mount(in:)`.
 
 This gives you:
 
@@ -51,7 +51,7 @@ This gives you:
 
 You can read more about mounting multiple apps in the [Application](../essentials/application.md#multiple-applications) chapter.
 
-You can also define [Web Components](web-components.md) in ElementaryUI and include their custom HTML tags in the server-rendered page. Your Swift module registers these custom elements with the browser and they mount automatically when appear in the server-generated HTML. This website uses custom elements for its interactive snippets by registering an `<elementary-snippet>` element.
+You can also define [Web Components](web-components.md) in ElementaryUI and include their custom HTML tags in the server-rendered page. Your Swift module registers these custom elements with the browser and they mount automatically when they appear in the server-generated HTML. This website uses custom elements for its interactive snippets by registering an `<elementary-snippet>` element.
 
 ## Hydration (the direction)
 

@@ -4,7 +4,7 @@
 This section is incomplete.
 :::
 
-### See also
+## See also
 
 - `ElementaryUI.Transition`
 - `ElementaryUI.View.transition(_:animation:)`

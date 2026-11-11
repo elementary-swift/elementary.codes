@@ -4,8 +4,8 @@
 This section is incomplete.
 :::
 
-### See also
+## See also
 
 - `ElementaryUI.View.bindValue(_:)`
 - `ElementaryUI.View.bindChecked(_:)`
-- [Controlling Focus](/guide/dom-interaction/controlling-focus)
+- [Controlling Focus](controlling-focus.md)
