@@ -46,18 +46,17 @@ Your application can still choose to use "full Swift", but the framework itself 
 ## The Road to 1.0
 
 While official _Swift for WebAssembly_ SDKs are still new and Embedded Swift continues to evolve rapidly, the foundation is solidifying.
-The core architecture — the reactive engine, the DOM mapping, and the animation system — are in place and ready to bear some load.
+The core architecture — the reactive engine, the DOM mapping, and the animation system — is in place and ready to bear some load.
 
 ::: info Here are a few high-level topics that are still ahead
 
 <div style="line-height: 1.1">
 
-- Support for creating web components (custom elements)
 - Fill in missing gaps for value bindings and event handlers
 - Client-side router implementation (for route-based SPAs)
 - Mechanism for fetching JSON data (embedded compatible)
 - Web Storage APIs (local/session storage, embedded compatible)
-- Complete transform and filter effects and built-in transitions
+- More built-in animatable modifiers (colors, borders) and transitions
 - Swift-native layout and style module (idiomatic APIs for CSS)
 - Support more CSS properties in FLIP animations
 - Investigate how to further reduce wasm binary size

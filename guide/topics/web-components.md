@@ -35,7 +35,7 @@ Here, `shadow: .open` mounts the view inside an open [Shadow DOM](https://develo
 
 <wonky-label wobble="30">Look, Mom, so wonky!</wonky-label>
 
-Once the Swift application loads and registers the element, matching tags mount and unmount automatically, including those already on the page. No explicit `Application.mount(in:)` call is needed.
+Once the Swift application loads and registers the element, matching tags mount and unmount automatically, including those already on the page. No explicit `ElementaryUI.Application.mount(in:)` call is needed.
 
 ## Typed attributes
 

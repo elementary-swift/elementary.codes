@@ -6,6 +6,15 @@ ElementaryUI provides on*Event* modifiers to handle DOM events like clicks, key 
 This section is incomplete.
 :::
 
+## Available events
+
+- `ElementaryUI.View.onClick(_:)`
+- `ElementaryUI.View.onMouseDown(_:)`
+- `ElementaryUI.View.onMouseMove(_:)`
+- `ElementaryUI.View.onMouseUp(_:)`
+- `ElementaryUI.View.onKeyDown(_:)`
+- `ElementaryUI.View.onInput(_:)`
+
 ## Example
 
 Use `ElementaryUI.View.onMouseMove(_:)` to track mouse movement:

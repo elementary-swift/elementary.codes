@@ -26,6 +26,6 @@ Here, `.phaseAnimator` animates an existing view. Each click adds a heart and ma
 
 ## Choosing animations
 
-Use the `animation` closure to choose an `ElementaryUI.Animation` for each phase, including the return to the first phase.
+Use the `animation` closure to choose an `ElementaryUI.Animation` for the transition into each phase, including the return to the first phase.
 
 Omit the closure to use the default animation, or return `nil` for a step without animation.

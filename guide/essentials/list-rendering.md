@@ -2,7 +2,7 @@
 
 ## `ForEach`
 
-Use `ElementaryUI.ForEach` when you need a stable id for your list items (reordering, insertions, animations). You can either use elements that implement `Identifiable`, or the `ElementaryUI.ForEach.init(_:id:content:)` initializer that takes an `id` closure returning any `Hashable` value.
+Use `ForEach` when you need a stable id for your list items (reordering, insertions, animations). You can either use elements that implement `Identifiable`, or the `ForEach(_:id:content:)` initializer that takes an `id` closure returning any `Hashable` value.
 
 <<< @/swift/Sources/Snippets/ListStrings.swift#snippet
 

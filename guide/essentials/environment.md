@@ -9,7 +9,7 @@ This sets up a typed environment key with a default value.
 
 ```swift
 extension EnvironmentValues {
-  @Entry var themeColor: String = "blue"
+    @Entry var themeColor: String = "blue"
 }
 ```
 
@@ -17,7 +17,7 @@ You can then provide a value using the `ElementaryUI.View.environment(_:_:)` mod
 
 ```swift
 MyView()
-  .environment(#Key(\.themeColor), "rebeccapurple")
+    .environment(#Key(\.themeColor), "rebeccapurple")
 ```
 
 ::: info NOTE
@@ -26,47 +26,47 @@ Since key paths cannot be used in Embedded Swift, you must wrap them with the `E
 
 ## Using environment values in a view
 
-Access environment values in your `ElementaryUI.View` using the `ElementaryUI.Environment` property wrapper.
+Access environment values in your `ElementaryUI.View` using the [`Environment`](https://swiftpackageindex.com/elementary-swift/elementary-ui/documentation/elementaryui/environment-swift.struct) property wrapper.
 
 ```swift
 @View
 struct Greeting {
-  @Environment(#Key(\.themeColor)) var color
+    @Environment(#Key(\.themeColor)) var color
 
-  var body: some View {
-    p(.style(["color": color])) { "Hello" }
-  }
+    var body: some View {
+        p(.style(["color": color])) { "Hello" }
+    }
 }
 ```
 
 ::: info NOTE
-`ElementaryUI.Environment` will only work in types annotated with the `ElementaryUI.@View` macro.
+[`Environment`](https://swiftpackageindex.com/elementary-swift/elementary-ui/documentation/elementaryui/environment-swift.struct) will only work in types annotated with the `ElementaryUI.@View` macro.
 :::
 
 ## Reactive objects
 
-You can also pass [reactive objects](./state-and-reactivity.md#reactive) directly in the environment. The object's type acts as the environment key.
+You can also pass [reactive objects](state-and-reactivity.md#reactive) directly in the environment. The object's type acts as the environment key.
 
 ```swift
 @Reactive
 final class UserProfile {
-  var name: String = "Anonymous"
+    var name: String = "Anonymous"
 }
 
 // Providing the object
 let profile = UserProfile()
 ContentView()
-  .environment(profile)
+    .environment(profile)
 
 // Reading the object in a sub view
 @View
 struct ProfileHeader {
-  @Environment(UserProfile.self) var profile
+    @Environment(UserProfile.self) var profile
 
-  var body: some View {
-    p {
-      "User: \(profile.name)"
+    var body: some View {
+        p {
+            "User: \(profile.name)"
+        }
     }
-  }
 }
 ```

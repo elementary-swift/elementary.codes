@@ -1,11 +1,11 @@
 # Animate changes to layout and CSS values
 
-ElementaryUI comes with a _**FLIP**_ animation system that enables automatic
+ElementaryUI comes with a **FLIP** animation system that enables automatic
 animation of essentially any visible change to your view's layout or appearance.
 
 **FLIP** (First, Last, Invert, Play) is a technique that captures the geometry or appearance of an element before and after a change, then animates the difference. A view can opt-in to FLIP handling with modifiers, and any [transaction with an animation](transactions-and-animations.md#transactions) will be animated accordingly.
 
-### Animate layout containers
+## Animate layout containers
 
 You can enable layout FLIP-handling on any [HTML element](../dom-interaction/html-elements.md) by applying the `ElementaryUI.View.animateContainerLayout(animateContainerSize:)` modifier.
 

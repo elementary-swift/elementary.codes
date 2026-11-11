@@ -16,7 +16,7 @@ hero:
       link: /guide/introduction
     - theme: alt
       text: ⭐️ GitHub
-      link: http://github.com/elementary-swift/elementary-ui
+      link: https://github.com/elementary-swift/elementary-ui
 
 features:
   - icon: 🌐
@@ -37,6 +37,9 @@ features:
   - icon: 🚀
     title: Vite-Powered Development
     details: Fast dev server with hot reload for rapid iteration
+  - icon: 🧩
+    title: Web Components
+    details: Publish views as typed custom elements for any web page
 ---
 
 <<< @/swift/Sources/Snippets/LoveCounter.swift#snippet

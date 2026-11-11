@@ -9,28 +9,28 @@ Use the `ElementaryUI.View.onAppear(_:)` modifier to run an action when a view i
 ```swift
 @View
 struct MyView {
-  var body: some View {
-    div { "Hello" }
-      .onAppear {
-        print("View appeared!")
-      }
-  }
+    var body: some View {
+        div { "Hello" }
+            .onAppear {
+                print("View appeared!")
+            }
+    }
 }
 ```
 
 ## `onDisappear`
 
-Use the `ElementaryUI.View.onDisappear(_:)` modifier to run an action when a view is removed from hierarchy.
+Use the `ElementaryUI.View.onDisappear(_:)` modifier to run an action when a view is removed from the hierarchy.
 
 ```swift
 @View
 struct MyView {
-  var body: some View {
-    div { "Goodbye" }
-      .onDisappear {
-        print("View disappeared!")
-      }
-  }
+    var body: some View {
+        div { "Goodbye" }
+            .onDisappear {
+                print("View disappeared!")
+            }
+    }
 }
 ```
 
@@ -41,15 +41,15 @@ The `ElementaryUI.View.onChange(of:initial:_:)` modifier triggers an action when
 ```swift
 @View
 struct CounterView {
-  @State var count = 0
+    @State var count = 0
 
-  var body: some View {
-    button { "Increment" }
-      .onClick { count += 1 }
-      .onChange(of: count) {
-        print("Count is now \(count)")
-      }
-  }
+    var body: some View {
+        button { "Increment" }
+            .onClick { count += 1 }
+            .onChange(of: count) {
+                print("Count is now \(count)")
+            }
+    }
 }
 ```
 
@@ -60,19 +60,19 @@ Use the `ElementaryUI.View.task(_:)` modifier to run an asynchronous operation w
 ```swift
 @View
 struct MyView {
-  @State var data: String?
+    @State var data: String?
 
-  var body: some View {
-    div {
-      if let data = data {
-        data
-      } else {
-        "Loading..."
-      }
+    var body: some View {
+        div {
+            if let data = data {
+                data
+            } else {
+                "Loading..."
+            }
+        }
+        .task {
+            data = await fetchData()
+        }
     }
-    .task {
-      data = await fetchData()
-    }
-  }
 }
 ```

@@ -62,7 +62,7 @@ Here is a list of starter and demo projects:
 | [**Minimal Vite Starter**](https://github.com/elementary-swift/starter-vite)      | Basic template for ElementaryUI.                                                              |
 | [**Tailwind Starter**](https://github.com/elementary-swift/starter-vite-tailwind) | Starter template with [Tailwind CSS](https://tailwindcss.com) preconfigured.                  |
 | [**Swiftle**](https://elementary-swift.github.io/elementary-ui/)                  | A tiny word game using [ElementaryFlow](https://github.com/elementary-swift/elementary-flow). |
-| [**Full Stack Swift Demo**](https://cloudflare-worker.examples.elementary.codes/) | Swift in the browser. Swift on the edge, running in Cloudflare workers.                       |
+| [**Full Stack Swift Demo**](https://cloudflare-worker.examples.elementary.codes/) | Swift in the browser. Swift on the edge, running in Cloudflare Workers.                       |
 
 ## Manual Setup
 
@@ -101,7 +101,7 @@ struct MyApp {
 ```swift:line-numbers=6 [Package.swift]
   let package = Package(
     name: "MyApp",
-    platforms: [.macOS(.v15)], // [!code ++]
+    platforms: [.macOS(.v26)], // [!code ++]
     dependencies: [
       .package(url: "https://github.com/swiftwasm/JavaScriptKit", from: "0.62.0"),
       .package(url: "https://github.com/elementary-swift/elementary-ui", from: "0.9.0")
@@ -192,7 +192,7 @@ Finally, add an `index.html` file with a short script that runs the WebAssembly 
   <body>
     <script type="module">
       import { init } from "virtual:swift-wasm?js";
-      await init()
+      await init();
     </script>
   </body>
 </html>

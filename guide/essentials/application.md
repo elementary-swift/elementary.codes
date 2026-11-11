@@ -9,18 +9,18 @@ Mounting an application means **attaching its rendered output to the DOM**. Afte
 ```swift
 @main
 struct MyApp {
-  static func main() {
-    Application(ContentView())
-      .mount(in: .body)
-  }
+    static func main() {
+        Application(ContentView())
+            .mount(in: .body)
+    }
 }
 ```
 
-The `ElementaryUI.Application.mount(in:)` supports arbitrary CSS selectors. You can mount an application into any parent element.
+The `ElementaryUI.Application.mount(in:)` method supports arbitrary CSS selectors. You can mount an application into any parent element.
 
 ```swift
 Application(ContentView())
-  .mount(in: "#app")
+    .mount(in: "#app")
 ```
 
 ## Multiple applications
@@ -30,13 +30,13 @@ You can create and mount multiple applications on the same page. This is useful 
 ```swift
 @main
 struct IslandsApp {
-  static func main() {
-    Application(Navigation())
-      .mount(in: "#nav-container")
+    static func main() {
+        Application(Navigation())
+            .mount(in: "#nav-container")
 
-    Application(CommentsSection())
-      .mount(in: "#comments-island")
-  }
+        Application(CommentsSection())
+            .mount(in: "#comments-island")
+    }
 }
 ```
 

@@ -12,15 +12,15 @@ Use the `ElementaryUI.State` property wrapper to declare local, mutable state fo
 
 <elementary-snippet file="TinyCounter" />
 
-The lifetime of the state is tied to the **view’s lifetime**. For example, when this `Counter` view first appears in the view hierachy, a new slice of memory is initialized with `0`. As long as the view remains mounted, the current value of `count` is kept. Once the view is removed from the hierarchy, the memory is released again.
+The lifetime of the state is tied to the **view’s lifetime**. For example, when this `TinyCounter` view first appears in the view hierarchy, a new slice of memory is initialized with `1`. As long as the view remains mounted, the current value of `count` is kept. Once the view is removed from the hierarchy, the memory is released again.
 
 ## `@Reactive`
 
-Use the `Reactivity.@Reactive` macro to define a reference type that can be used view state.
+Use the `Reactivity.@Reactive` macro to define a reference type that can be used as view state.
 
-Any view that accesses one or more properties in its `body` will automatically be re-evaluated when the value of these properties change.
+Any view that accesses one or more properties in its `body` will automatically be re-evaluated when the values of these properties change.
 
-::: info Note
+::: info NOTE
 
 This is essentially `@Observable`, but with support for Embedded Swift.
 

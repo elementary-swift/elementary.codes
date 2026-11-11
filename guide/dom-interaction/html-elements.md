@@ -17,13 +17,13 @@ Build up your HTML using the provided lower-case types like `div`, `p`, `button`
 ```swift
 @View
 struct MyView {
-  var body: some View {
-    div {
-      h1 { "Title" }
-      p { "Paragraph text" }
-      button { "Click me" }
+    var body: some View {
+        div {
+            h1 { "Title" }
+            p { "Paragraph text" }
+            button { "Click me" }
+        }
     }
-  }
 }
 ```
 
@@ -33,14 +33,14 @@ HTML attributes like `class`, `style`, and `id` are typically set via the elemen
 
 ```swift
 div(.class("container"), .id("main")) {
-  p(.style(["color": "crimson"])) {
-    "Styled text"
-  }
-  input(.type(.text), .placeholder("Enter something"))
+    p(.style(["color": "crimson"])) {
+        "Styled text"
+    }
+    input(.type(.text), .placeholder("Enter something"))
 }
 ```
 
-Attributes can also be altered by using the modifier syntax, this allows for easy handling of conditional attributes.
+Attributes can also be altered by using the modifier syntax, which allows for easy handling of conditional attributes.
 
 ```swift
 div {
