@@ -1,10 +1,10 @@
 {
   "type": "module",
   "dependencies": {
-    "@bjorn3/browser_wasi_shim": "~0.4.2"
+    "uwasi": "^1.6.0"
   },
   "devDependencies": {
-    "@elementary-swift/vite-plugin-swift-wasm": "~0.2.0",
+    "@elementary-swift/vite-plugin-swift-wasm": "~0.3.0",
     "markdown-it": "^14.3.0",
     "vitepress": "2.0.0-alpha.19",
     "vue": "^3.5.41"
