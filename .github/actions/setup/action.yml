@@ -1,0 +1,34 @@
+name: Setup
+description: Install Node, pnpm, Swift + Wasm SDK, binaryen and project dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v6
+      with:
+        version: 9
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v7
+      with:
+        node-version: 24
+        cache: "pnpm"
+
+    - uses: swift-actions/setup-swift@v3
+      with:
+        swift-version: "6.4.2"
+        skip-verify-signature: true
+
+    - name: Install Swift SDK for WebAssembly
+      shell: bash
+      run: swift sdk install https://download.swift.org/swift-6.4.2-release/wasm-sdk/swift-6.4.2-RELEASE/swift-6.4.2-RELEASE_wasm.artifactbundle.tar.gz --checksum 83baca83553f8c443cda7b84800912e6e709c3acd2e7ebf277794ca5836c0da5
+
+    - name: Install dependencies
+      shell: bash
+      run: swift package resolve --package-path swift && pnpm install --frozen-lockfile
+
+    - name: Install wasm-opt
+      uses: phi-ag/setup-binaryen@v1
+      with:
+        version: "133"

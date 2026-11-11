@@ -39,4 +39,3 @@ You can use the familiar `$` syntax on `ElementaryUI.State` variables to create 
 <<< @/swift/Sources/Snippets/BindingCounterButton.swift#snippet
 
 <elementary-snippet file="BindingCounterButton" />
-

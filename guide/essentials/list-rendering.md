@@ -12,7 +12,6 @@ Use `ElementaryUI.ForEach` when you need a stable id for your list items (reorde
 
 For simple cases where a stable identity does not matter, you can also just iterate a collection.
 
-
 ```swift
 div {
     for item in items {
@@ -20,4 +19,3 @@ div {
     }
 }
 ```
-
