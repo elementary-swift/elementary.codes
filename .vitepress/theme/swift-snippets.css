@@ -28,7 +28,7 @@ elementary-snippet button {
   transition: background-color 0.2s ease;
 }
 
-elementary-snippet button+button {
+elementary-snippet button + button {
   margin-left: 8px;
 }
 
