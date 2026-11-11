@@ -22,6 +22,7 @@ export default defineConfig({
       swiftWasm({
         packagePath: "./swift",
         useEmbeddedSDK: true,
+        js: { wasiRuntime: "uwasi" },
       }),
     ],
   },
